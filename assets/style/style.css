@@ -1,0 +1,197 @@
+/* set global page font and declare common variables */
+:root {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    --primary-text: #ffffff;
+    --primary-bg: #4c3159;
+
+    --secondary-bg: #ffffff;
+    --secondary-text: #000000;
+
+    --corner-rounding: 10px;
+}
+
+/* reset headers */
+h2, h5, h6 {
+    margin: 0px;
+}
+
+/* reset a */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* tweak hr style */
+hr {
+    max-width: 50%;
+    background-color: var(--primary-bg);
+}
+
+/* create vr (vertical rule) class */
+.vr {
+    padding: 0.5px;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+/* set elements with this class to primary background color */
+.bg-primary {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+/* set elements with this class to primary text color */
+.text-primary {
+    color: var(--primary-text)
+}
+
+/* navbar style */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+
+    position:sticky;
+    top: 5px;
+
+    border-radius: var(--corner-rounding);
+}
+
+/* re-style links for navbar */
+.navbar-link {
+    text-decoration: none;
+
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+    border-radius: var(--corner-rounding);
+
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    margin-left: 5px;
+    margin-right: 5px;
+
+    min-width: 90px;
+    min-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: medium;
+}
+
+/* navbar links grow when hovered */
+.navbar-link:hover {
+    min-width: 95px;
+    min-height: 45px
+}
+
+/* dim while clicked */
+.navbar-link:active {
+    background-color: lightgray;
+}
+
+/* container to organize navbar links */
+#navbar-link-container {
+    display: flex;
+
+    align-items: center;
+}
+
+/* don't let section images take up the whole page */
+.section-image {
+    align-self:flex-end;
+    width: 300px;
+    margin: 10px;
+    
+    border-radius: var(--corner-rounding);
+}
+
+/* layout for common sections */
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin: 5px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* limit size of section comment to share space with photo */
+.section-content {
+    max-width: 500px;
+}
+
+/* reverse the direction of the career section to create symmetry */
+#career {
+    flex-direction: row-reverse;
+}
+
+/* set size of gallery entries */
+.img-gallery .gallery-entry {
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+
+    border-radius: var(--corner-rounding);
+}
+
+/* make primary entry larger than the others */
+.img-gallery .gallery-entry-primary {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+/* gallery items layout */
+.img-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* set gallery image to take up full width of container */
+.img-gallery .gallery-entry img {
+    width: 100%;
+}
+
+/* set gallery item header position, background, and color */
+.img-gallery .gallery-entry h4 {
+    position: absolute;
+    background-color: var(--secondary-bg);
+    width: fit-content;
+    padding: 5px;
+}
+
+/* space applications evenly */
+#applications {
+    margin: 5px
+}
+
+/* footer layout */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* center and space contact options */
+footer div {
+    display: flex;
+    justify-content: space-around;
+    max-width: 300px;
+    width: 100%;
+}
